@@ -4,6 +4,8 @@ Binoculars is your debug assistant for Rails. It gives you a real-time dashboard
 
 It helps developers capture request/response data and view them in a simple dashboard, right inside their Rails app. Perfect companion for your Rails development environment.
 
+![Dashboard](docs/images/dashboard.png)
+
 ---
 
 ## Installation
