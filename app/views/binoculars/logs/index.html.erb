@@ -1,6 +1,6 @@
 <h1>Requests</h1>
 
-<table>
+<table class="requests-table">
   <thead>
     <tr>
       <th>Method</th>
@@ -13,12 +13,17 @@
   <tbody>
     <% @logs.each do |log| %>
       <tr>
-        <td><%= log[:method] %></td>
+        <td><span class="method"><%= log[:method] %></span></td>
         <td><%= log[:path] %></td>
-        <td><%= log[:status] %></td>
+        <td>
+          <span class="status <%= "status-#{log[:status]}" %>">
+            <%= log[:status] %>
+          </span>
+        </td>
         <td><%= log[:time].strftime("%b %d, %Y %I:%M:%S %p") %></td>
         <td><%= (log[:duration] * 1000).round(2) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
